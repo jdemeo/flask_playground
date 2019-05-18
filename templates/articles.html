@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Articles</h1>
+  <ul class="list-group">
+    <!-- Jinja template engine allows for loops -->
+    {% for article in articles %}
+      <!-- Double curly braces mean it's a value -->
+      <li class="list-group-item">
+        <a href="article/{{article.id}}">{{article.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}
